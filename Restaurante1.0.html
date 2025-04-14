@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/stylo1.css">
+    <title>Descubre Restaurantes</title>
+    
+</head>
+<body>
+    <h1>Nuestros Restaurantes</h1>
+
+    <div class="restaurant-grid">
+        <div class="restaurant-card" data-id="1" onclick="openRestaurantPage('https://www.b2envios.site/solicitud')">
+          
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBV6QrKYNEAcpjZoXAPF97RRTiqhJDtVnSrA&s" alt="Comida Italiana">
+            <div class="restaurant-info">
+                <h3>La Trattoria</h3>
+                <p>Horario: 12:00 - 22:00</p>
+                <p>Dirección: Av. Italia 123, Puente piedra</p>
+                <p>Clasificación: <span class="rating">★★★★☆</span></p>
+            </div>
+        </div>
+
+        <div class="restaurant-card" data-id="2">
+            <img src="https://cloudfront-us-east-1.images.arcpublishing.com/infobae/KJTTHTDYUZHIPL237BRI4GAQB4.jpg" alt="Comida Peruana">
+            <div class="restaurant-info">
+                <h3>Sabor Andino</h3>
+                <p>Horario: 11:00 - 23:00</p>
+                <p>Dirección: Calle Perú 456, Comas</p>
+                <p>Clasificación: <span class="rating">★★★★★</span></p>
+            </div>
+        </div>
+
+        <div class="restaurant-card" data-id="3">
+            <img src="https://content.skyscnr.com/m/2dcd7d0e6f086057/original/GettyImages-186142785.jpg?resize=1224%3Aauto" alt="Comida Mexicana">
+            <div class="restaurant-info">
+                <h3>El Ranchito</h3>
+                <p>Horario: 18:00 - 24:00</p>
+                <p>Dirección: Jr. México 789, San Isidro</p>
+                <p>Clasificación: <span class="rating">★★★☆☆</span></p>
+            </div>
+        </div>
+
+        <div class="restaurant-card" data-id="4">
+            <img src="https://gastronomicainternacional.com/wp-content/uploads/2020/04/gastronomia-china-1-1024x576.jpg" alt="Comida Asiática">
+            <div class="restaurant-info">
+                <h3>Wok & Roll</h3>
+                <p>Horario: 10:00 - 21:00</p>
+                <p>Dirección: Av. Carlos Izaguirre 1230, Los Olivos</p>
+                <p>Clasificación: <span class="rating">★★★★☆</span></p>
+            </div>
+        </div>
+
+        <div class="restaurant-card" data-id="5">
+            <img src="https://hips.hearstapps.com/hmg-prod/images/cocina-vegana-elle-gourmet-6537604a784d0.jpg?crop=0.616xw:1.00xh;0.119xw,0&resize=1200:*" alt="Comida Vegetariana">
+            <div class="restaurant-info">
+                <h3>Verde Lima</h3>
+                <p>Horario: 09:00 - 20:00</p>
+                <p>Dirección: Calle Primavera 345, Lince</p>
+                <p>Clasificación: <span class="rating">★★★★★</span></p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function openRestaurantPage(url) {
+            window.open(url, '_blank'); // Abre la URL en una nueva pestaña
+        }
+    </script>
+</body>
+</html>

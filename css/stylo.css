@@ -1,0 +1,93 @@
+body {
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 15px;
+    background-color: #ffffff;
+    margin: 0;
+    padding: 0;
+}
+.container {
+    max-width: 500px;
+    margin: 50px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+
+}
+h2 {
+    text-align: center;
+}
+label {
+    display: block;
+    margin-top: 10px;
+}
+input, select, textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+button:hover {
+    background-color: #218838;
+}
+.delivery-options {
+    display: flex;
+    justify-content: space-around;
+    margin: 10px 0;
+}
+.delivery-option {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.icon {
+    width: 30px;
+    height: 30px;
+}
+#totalCost {
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+}
+.address-field {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+}
+.address-field input {
+    flex-grow: 1;
+    margin-right: 10px;
+}
+.remove-btn {
+    background-color: #f5051c;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 5px;
+    width: 30px; /* Define el ancho deseado */
+    height: 25px; /* Define la altura deseada */
+
+}
+.remove-btn:hover {
+    background-color: #c82333;
+}
+
+#successMessage {
+    text-align: center;
+    color: green;
+    margin-top: 20px;
+    display: none;
+}
