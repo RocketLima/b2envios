@@ -1,86 +1,210 @@
 body {
     font-family: 'Nunito Sans', sans-serif;
-    font-size: 15px;
-    background-color: #ffffff;
+    font-size: 14px;
+    background-color: #f4f4f4; /* Un fondo más claro para el cuerpo */
     margin: 0;
-    padding: 0;
+    padding: 20px; /* Añadido un poco de padding al body para espaciar del borde */
 }
-.container {
+
+/* Estilos del Encabezado */
+.main-header {
+    background-color: #fff;
+    color: #333;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px; /* Añadido margen inferior para separar del contenido */
+}
+
+.main-header .container1 { /* Especificar el contenedor del header */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo a {
+    display: block;
+}
+
+.logo img {
+    height: 30px;
+}
+
+.main-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.main-nav li {
+    margin-left: 20px;
+}
+
+.main-nav li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+}
+
+.search-bar input[type="text"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px 0 0 5px;
+    margin-right: -5px;
+}
+
+.search-bar button {
+    background-color: #f8f8f8;
+    border: 1px solid #ccc;
+    border-left: none;
+    padding: 10px 15px;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+}
+
+.search-bar button img {
+    height: 20px;
+    vertical-align: middle;
+}
+
+.location-selector {
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+}
+
+.location-selector .location-icon {
+    font-size: 1.2em;
+    margin-right: 5px;
+    color: #555;
+}
+
+.location-selector select {
+    padding: 8px 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.announcement-bar {
+    background-color: #0047AB;
+    color: #fff;
+    text-align: center;
+    padding: 10px 20px;
+    font-size: 0.9em;
+}
+
+.announcement-bar a {
+    color: #fff;
+    font-weight: bold;
+    text-decoration: underline;
+    margin: 0 10px;
+}
+
+/* Estilos del Formulario */
+.container{
     max-width: 500px;
-    margin: 50px auto;
+    margin: 20px auto; /* Reducido el margen superior para estar más cerca del header */
     background-color: #fff;
     padding: 20px;
     border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Añadida una sombra al contenedor del formulario */
+}
 
-}
-h2 {
+h2{
     text-align: center;
+    color: #333; /* Añadido color al título */
+    margin-bottom: 20px; /* Añadido margen inferior al título */
 }
+
 label {
     display: block;
-    margin-top: 10px;
+    margin-top: 15px; /* Aumentado el margen superior de las etiquetas */
+    color: #555; /* Añadido color a las etiquetas */
 }
+
 input, select, textarea {
-    width: 100%;
+    width: calc(100% - 22px); /* Ajustado el ancho para tener en cuenta el padding y el borde */
     padding: 10px;
     margin: 5px 0;
     border: 1px solid #ccc;
     border-radius: 5px;
+    font-size: 1em; /* Añadido tamaño de fuente */
 }
+
 button {
     width: 100%;
-    padding: 10px;
-    margin-top: 10px;
+    padding: 12px; /* Aumentado el padding del botón */
+    margin-top: 20px; /* Aumentado el margen superior del botón */
     background-color: #28a745;
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    font-size: 1em; /* Añadido tamaño de fuente */
 }
+
 button:hover {
     background-color: #218838;
 }
+
 .delivery-options {
     display: flex;
     justify-content: space-around;
-    margin: 10px 0;
+    margin: 15px 0; /* Aumentado el margen */
 }
+
 .delivery-option {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
+
 .icon {
     width: 30px;
     height: 30px;
+    margin-bottom: 5px; /* Añadido margen inferior al icono */
 }
+
 #totalCost {
-    margin-top: 20px;
-    font-size: 18px;
+    margin-top: 25px; /* Aumentado el margen */
+    font-size: 1.2em; /* Aumentado el tamaño de la fuente */
     font-weight: bold;
     color: #333;
+    text-align: center; /* Centrado el costo total */
 }
+
 .address-field {
-    margin-top: 10px;
+    margin-top: 15px; /* Aumentado el margen */
     display: flex;
     align-items: center;
 }
+
 .address-field input {
     flex-grow: 1;
     margin-right: 10px;
 }
+
 .remove-btn {
-    background-color: #f5051c;
+    background-color: #dc3545; /* Cambiado el color del botón de remover a rojo */
     color: white;
     border: none;
-    padding: 5px 10px;
+    padding: 8px 12px; /* Ajustado el padding del botón de remover */
     border-radius: 5px;
     cursor: pointer;
     margin-top: 5px;
-    width: 30px; /* Define el ancho deseado */
-    height: 25px; /* Define la altura deseada */
-
+    width: auto; /* Ajustado el ancho a automático para que se ajuste al contenido */
+    height: auto; /* Ajustado la altura a automático */
+    font-size: 0.9em; /* Añadido tamaño de fuente */
 }
+
 .remove-btn:hover {
     background-color: #c82333;
 }
@@ -88,6 +212,182 @@ button:hover {
 #successMessage {
     text-align: center;
     color: green;
-    margin-top: 20px;
+    margin-top: 25px; /* Aumentado el margen */
     display: none;
+    font-weight: bold; /* Añadido negrita al mensaje de éxito */
+    font-size: 1.1em; /* Aumentado el tamaño de la fuente */
+}
+
+
+
+/* Estilos para pantallas más pequeñas (móviles) */
+@media (max-width: 768px) {
+    .main-header .container1 {
+        flex-direction: column; /* Apilar los elementos verticalmente */
+        align-items: flex-start; /* Alinear los elementos a la izquierda */
+    }
+
+    .logo {
+        margin-bottom: 10px;
+        width: 100%; /* Ocupar todo el ancho disponible */
+    }
+
+    .logo a {
+        display: inline-block; /* Permitir que el logo se alinee a la izquierda */
+    }
+
+    .main-nav {
+        margin-bottom: 10px;
+        width: 100%;
+    }
+
+    .main-nav ul {
+        flex-direction: column; /* Apilar los enlaces de navegación verticalmente */
+        width: 100%;
+    }
+
+    .main-nav li {
+        margin-left: 0;
+        margin-bottom: 10px;
+        width: 100%;
+    }
+
+    .main-nav li a {
+        display: block; /* Hacer que los enlaces ocupen todo el ancho */
+        padding: 10px 0;
+        border-bottom: 1px solid #eee; /* Separar los enlaces */
+    }
+
+    .search-bar {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .search-bar input[type="text"] {
+        width: calc(100% - 60px); /* Ajustar el ancho del input */
+        max-width: none; /* Eliminar la limitación de ancho en móviles */
+    }
+
+    .location-selector {
+        margin-left: 0;
+        margin-bottom: 10px;
+        width: 100%;
+        display: flex;
+        justify-content: flex-start; /* Alinear a la izquierda */
+    }
+
+    .announcement-bar {
+        padding: 15px 10px; /* Ajustar el padding en móviles */
+        font-size: 0.9em;
+    }
+}
+
+/* Estilos del Formulario (sin cambios relevantes para la responsividad del header) */
+.container {
+    max-width: 500px;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-top: 15px;
+    color: #555;
+}
+
+input, select, textarea {
+    width: calc(100% - 22px);
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 20px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+.delivery-options {
+    display: flex;
+    justify-content: space-around;
+    margin: 15px 0;
+}
+
+.delivery-option {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.icon {
+    width: 30px;
+    height: 30px;
+    margin-bottom: 5px;
+}
+
+#totalCost {
+    margin-top: 25px;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+}
+
+.address-field {
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.address-field input {
+    flex-grow: 1;
+    margin-right: 10px;
+}
+
+.remove-btn {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 5px;
+    width: auto;
+    height: auto;
+    font-size: 0.9em;
+}
+
+.remove-btn:hover {
+    background-color: #c82333;
+}
+
+#successMessage {
+    text-align: center;
+    color: green;
+    margin-top: 25px;
+    display: none;
+    font-weight: bold;
+    font-size: 1.1em;
 }

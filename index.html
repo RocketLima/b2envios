@@ -5,84 +5,117 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600&display=swap" rel="stylesheet">
     <title>Registro de Envíos</title>
+    <link rel="icon" href="imagenes/logo.png" type="image/x-icon">
     <link rel="stylesheet" href="css/stylo.css">
 </head>
 <body>
-
-<div class="container">
-    <h2>Registro de Envíos</h2>
-
-    <form id="shippingForm">
-        <label for="senderName">¿Quién Envía?</label>
-        <input type="text" id="senderName" name="senderName" required>
-
-        <label for="senderPhone">Celular del que Envía</label>
-        <input type="text" id="senderPhone" name="senderPhone" required pattern="^9\d{8}$" title="El número debe comenzar con 9 y tener 9 dígitos.">
-
-        <label for="pickupAddress">Dirección de Recojo</label>
-        <input type="text" id="pickupAddress" name="pickupAddress" required class="address-input">
-
-        <label for="receiverName">¿Quién Recibe?</label>
-        <input type="text" id="receiverName" name="receiverName" required>
-
-        <label for="receiverPhone">Celular del que recibe</label>
-        <input type="text" id="receiverPhone" name="receiverPhone" required pattern="^9\d{8}$" title="El número debe comenzar con 9 y tener 9 dígitos.">
-
-        <label>Dirección de Envío</label>
-        <div id="additionalAddresses">
-            <div class="address-field">
-                <input type="text" name="receiverAddress[]" required class="address-input">
+    <div class="container1">
+        <header class="main-header">
+            <div class="container1">
+                <div class="logo">
+                    <a href="#">
+                        <img src="imagenes/logo.png" alt="Logo de la Empresa">
+                    </a>
+                </div>
+                <nav class="main-nav">
+                    <ul>
+                        <li><a href="#">Inicio</a></li>
+                        <li><a href="#">Socios</a></li>
+                        <li><a href="#">Restaurantes</a></li>
+                        <li><a href="#">Promociones</a></li>
+                        <li><a href="#">Conductores</a></li>
+                    </ul>
+                </nav>
+                
+                <div class="location-selector">
+                    <span class="location-icon">📍</span>
+                    <select>
+                        <option value="lima">Lima</option>
+                        <option value="miraflores">Arequipa</option>
+                        <option value="san-isidro">Cusco</option>
+                    </select>
+                </div>
             </div>
-        </div>
-        <button type="button" id="addAddressBtn">Agregar otra dirección de envío</button>
-
-        <label>Tipo de Envío</label>
-        <div class="delivery-options">
-            <div class="delivery-option">
-                <input type="radio" id="particular" name="shippingType" value="particular" required checked>
-                <label for="particular">Particular</label>
+            <div class="announcement-bar">
+                <p>🎉 Nuevo en B2envios? Disfruta de... ¡hasta 15 días de entregas gratis! <a href="#">Regístrate</a> <a href="#">Términos y condiciones</a></p>
             </div>
-            <div class="delivery-option">
-                <input type="radio" id="ecommerce" name="shippingType" value="ecommerce">
-                <label for="ecommerce">Ecommerce (a partir de 2 envíos)</label>
+        </header>
+    </div>
+
+    <div class="container">
+        <h2>Registro de Envíos</h2>
+
+        <form id="shippingForm">
+            <label for="senderName">¿Quién Envía?</label>
+            <input type="text" id="senderName" name="senderName" required>
+
+            <label for="senderPhone">Celular del que Envía</label>
+            <input type="text" id="senderPhone" name="senderPhone" required pattern="^9\d{8}$" title="El número debe comenzar con 9 y tener 9 dígitos.">
+
+            <label for="pickupAddress">Dirección de Recojo</label>
+            <input type="text" id="pickupAddress" name="pickupAddress" required class="address-input">
+
+            <label for="receiverName">¿Quién Recibe?</label>
+            <input type="text" id="receiverName" name="receiverName" required>
+
+            <label for="receiverPhone">Celular del que recibe</label>
+            <input type="text" id="receiverPhone" name="receiverPhone" required pattern="^9\d{8}$" title="El número debe comenzar con 9 y tener 9 dígitos.">
+
+            <label>Dirección de Envío</label>
+            <div id="additionalAddresses">
+                <div class="address-field">
+                    <input type="text" name="receiverAddress[]" required class="address-input">
+                </div>
             </div>
-        </div>
+            <button type="button" id="addAddressBtn">Agregar otra dirección de envío</button>
 
-        <label>Método de Entrega</label>
-        <div class="delivery-options">
-            <div class="delivery-option">
-                <input type="radio" id="auto" name="deliveryMethod" value="auto" required checked>
-                <label for="auto">
-                    <img src="https://img.icons8.com/ios-filled/50/000000/car.png" alt="Auto" class="icon">
-                    Auto
-                </label>
+            <label>Tipo de Envío</label>
+            <div class="delivery-options">
+                <div class="delivery-option">
+                    <input type="radio" id="particular" name="shippingType" value="particular" required checked>
+                    <label for="particular">Particular</label>
+                </div>
+                <div class="delivery-option">
+                    <input type="radio" id="ecommerce" name="shippingType" value="ecommerce">
+                    <label for="ecommerce">Ecommerce (a partir de 2 envíos)</label>
+                </div>
             </div>
-            <div class="delivery-option">
-                <input type="radio" id="moto" name="deliveryMethod" value="moto">
-                <label for="moto">
-                    <img src="https://img.icons8.com/ios-filled/50/000000/motorcycle.png" alt="Moto" class="icon">
-                    Moto
-                </label>
+
+            <label>Método de Entrega</label>
+            <div class="delivery-options">
+                <div class="delivery-option">
+                    <input type="radio" id="auto" name="deliveryMethod" value="auto" required checked>
+                    <label for="auto">
+                        <img src="https://img.icons8.com/ios-filled/50/000000/car.png" alt="Auto" class="icon">
+                        Auto
+                    </label>
+                </div>
+                <div class="delivery-option">
+                    <input type="radio" id="moto" name="deliveryMethod" value="moto">
+                    <label for="moto">
+                        <img src="https://img.icons8.com/ios-filled/50/000000/motorcycle.png" alt="Moto" class="icon">
+                        Moto
+                    </label>
+                </div>
             </div>
-        </div>
 
-        <label for="comments">Comentarios</label>
-        <textarea id="comments" name="comments" rows="4"></textarea>
+            <label for="comments">Comentarios</label>
+            <textarea id="comments" name="comments" rows="4"></textarea>
 
-        <label for="discountCode">Cupón de Descuento</label>
-        <input type="text" id="discountCode" name="discountCode" placeholder="Ingrese su cupón aquí">
+            <label for="discountCode">Cupón de Descuento</label>
+            <input type="text" id="discountCode" name="discountCode" placeholder="Ingrese su cupón aquí">
 
 
-        <div id="totalCost">Importe total: S/ 0.00</div>
+            <div id="totalCost">Importe total: S/ 0.00</div>
 
-        <button type="submit">Registrar Envío</button>
-    </form>
+            <button type="submit">Registrar Envío</button>
+        </form>
 
-    <div id="successMessage" style="display: none;">¡Se registro correctamente su solicitud! no olvide estar al tanto de su número de contacto.</div>
+        <div id="successMessage" style="display: none;">¡Se registro correctamente su solicitud! no olvide estar al tanto de su número de contacto.</div>
 
-</div>
+    </div>
 
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAnAHF2BltX0b2Vs4NN7gHhJQTm1dk9UKQ&libraries=places&callback=initAutocomplete" async defer></script>
-<script src="/js1.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAnAHF2BltX0b2Vs4NN7gHhJQTm1dk9UKQ&libraries=places&callback=initAutocomplete" async defer> </script>
+    <script src="/js1.js"></script>
 </body>
 </html>
