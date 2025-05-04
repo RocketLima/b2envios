@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Login Moderno</title>
+  <link rel="stylesheet" href="css/stylologin.css">
+  <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-auth.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h2>Inicia Sesión</h2>
+
+    <input type="email" id="email" placeholder="Correo electrónico">
+    <input type="password" id="password" placeholder="Contraseña">
+
+    <div class="buttons">
+      <button class="btn primary" onclick="loginConCorreo()">Iniciar sesión</button>
+      <button class="btn secondary" onclick="registrarUsuario()">Registrarse</button>
+      <button class="btn google" onclick="loginConGoogle()">Continuar con Google</button>
+    </div>
+
+    <p id="mensaje"></p>
+  </div>
+
+  <script src="/login.js"></script>
+</body>
+</html>
