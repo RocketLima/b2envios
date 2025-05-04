@@ -3,7 +3,6 @@ body {
   padding: 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Fuente más moderna */
   background:#fff;
-  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -12,7 +11,7 @@ body {
 .container .logo {
   position: absolute;
   top: 20px; /* Ajusta la distancia desde la parte superior */
-  left: 20px; /* Ajusta la distancia desde la izquierda */
+  left: 25px; /* Ajusta la distancia desde la izquierda */
   width: 50px; /* Ajusta el ancho del logo según necesites */
   height: auto; /* Mantiene la proporción del logo */
 }
