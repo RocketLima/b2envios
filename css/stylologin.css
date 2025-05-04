@@ -13,7 +13,7 @@ body {
   position: absolute;
   top: 20px; /* Ajusta la distancia desde la parte superior */
   left: 20px; /* Ajusta la distancia desde la izquierda */
-  width: 80px; /* Ajusta el ancho del logo según necesites */
+  width: 50px; /* Ajusta el ancho del logo según necesites */
   height: auto; /* Mantiene la proporción del logo */
 }
 
